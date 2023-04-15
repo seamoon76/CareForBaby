@@ -61,9 +61,9 @@ Linux server: Ubuntu 20.04
     sudo docker-compose up
     ```
 
-## Usage
+## Usage and Demo
 
-See `doc/CareForBaby Product Document.pdf`
+See `doc/CareForBaby Product Document.pdf` and `demo/CareForBaby Demo.mp4`
 
 ## Author
 
