@@ -4,8 +4,8 @@ App<IAppOption>({
     localDebug:false, // 设置为TRUE时，访问的URL将变为http://127.0.0.1:8000
     localUrl:'http://127.0.0.1:8000/',
     serverUrl:'https://se.maqi.site:8001/',
-    // appid:"wxdbfa43410e90e3e1",
-    // appsecret:"58e0acd54570bc752371239dc10019bf",
+    // appid:"",
+    // appsecret:"",
     // access_token:""
 
 

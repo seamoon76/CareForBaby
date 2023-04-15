@@ -189,8 +189,8 @@ Page({
 
   onTapGoToWechatBand(){
     let that=this
-    let appid="wxdbfa43410e90e3e1"
-    let appsecret="58e0acd54570bc752371239dc10019bf"
+    let appid=""
+    let appsecret=""
     let url_raw="https://api.weixin.qq.com/sns/jscode2session"
     wx.login({
       success (res) {

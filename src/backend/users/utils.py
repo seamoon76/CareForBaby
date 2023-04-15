@@ -25,8 +25,8 @@ class Util:
 class OpenidUtils(object):
     def __init__(self, jscode):
         self.url = "https://api.weixin.qq.com/sns/jscode2session"
-        self.appid = "wxdbfa43410e90e3e1"
-        self.secret = "58e0acd54570bc752371239dc10019bf"
+        self.appid = ""
+        self.secret = ""
         self.jscode = jscode    # 前端传回的动态jscode
 
     def get_openid(self):
