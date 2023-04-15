@@ -1,0 +1,37 @@
+/* pages/admin/selfInfoModify/selfInfoModify.wxss */
+/* pages/register/register.wxss */
+.title{
+  position: relative;
+}
+.section{
+  position: relative;
+  top: 50rpx;
+}
+.l-form-btn-class{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10rpx;
+}
+.buttons{
+  display: flex;
+}
+.buttons button{
+  width: 180rpx;
+  top: 50rpx;
+}
+
+.buttons .revise{
+  background-color: #3a63bd;
+  font-weight: 400;
+  font-size: 33rpx;
+  width: 180rpx;
+}
+.buttons .back{
+  background-color: transparent;
+  border: solid;
+  border-width: 3rpx;
+  color: #3a63bd;
+  font-weight: 400;
+  font-size: 33rpx;
+  width: 180rpx;
+}

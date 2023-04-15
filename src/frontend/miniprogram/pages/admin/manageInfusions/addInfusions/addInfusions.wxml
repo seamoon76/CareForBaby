@@ -1,0 +1,30 @@
+<!--pages/manageInfusions/addInfusions/addInfusions.wxml-->
+<!--pages/manageInfusions/infusionDetaildInfoRevised/infusionDetaildInfoRevised.wxml-->
+<!--pages/admin/nurseDetaildInfoRevised/nurseDetaildInfoRevised.wxml-->
+<view style="text-align: center;">
+  <text style="position: relative; top: 25rpx; font-size: 40rpx; ">手动补录</text>
+</view>
+
+<form bindsubmit="formSubmit">
+  <view style="display: flex; position: relative; top: -10rpx;">
+    <button type='primary' style="width:220rpx; height: 80rpx; font-size: 33rpx; font-weight: 400; color:#3a63bd; background-color: transparent; border: solid 3rpx;left: -70rpx;" bindtap="onTapCancel">取消</button>
+    <button type='primary' style="width: 220rpx; height: 80rpx; font-size: 30rpx; font-weight: 400; background-color: #3a63bd; left: -70rpx;" form-type='submit'>确认添加</button>
+  </view>
+
+  <l-input label="开始时间" placeholder='yy-mm-dd HH:MM:SS' required="{{true}}" name="start_time" width="600" label-width="300" required="{{true}}"/>
+  <l-input label="结束时间" placeholder='yy-mm-dd HH:MM:SS' width="600" label-width="300" name="end_time"/>
+  <l-input label="患者姓名" width="600" label-width="300" name="name" placeholder="请输入" required="{{true}}" />
+  <l-input label="患者住院号" width="600" label-width="300" name="patient_id" placeholder="请输入" required="{{true}}"/>
+  <l-input label="床号" width="600" label-width="300" name="bed_id" placeholder="请输入" required="{{true}}"/>
+  <l-input label="药物名称" width="600" label-width="300" name="drug" placeholder="请输入" required="{{true}}"/>
+  <l-input label="药物剂量" width="600" label-width="300" name="dose" placeholder="请输入" required="{{true}}"/>
+  <l-input label="静脉" width="600" label-width="300" name="vein" placeholder="请输入" required="{{true}}"/>
+  <l-input label="器材" width="600" label-width="300" name="equipments" placeholder="请输入" required="{{true}}"/>
+  <l-input label="执行护士" width="600" label-width="300" name="nurse_id" placeholder="请输入工作证号" required="{{true}}"/>
+  <text style="position: relative; font-size: 28rpx; left: 23rpx; top: 20rpx;">注意事项：</text>
+  <view style="position: relative; width: 580rpx; left:20rpx; top:15rpx;">
+    <l-textarea style="position: relative; top: 35rpx;" name="tips" placeholder="请输入" required="{{true}}"></l-textarea>
+  </view>
+</form>
+
+

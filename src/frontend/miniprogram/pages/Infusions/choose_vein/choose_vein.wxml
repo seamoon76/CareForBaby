@@ -1,0 +1,50 @@
+<!--pages/Infusions/choose_vein/choose_vein.wxml-->
+<view style="margin-top:10px; font-size: large; font-weight: 1000; text-align:center;">患儿信息</view>
+
+<view class="table">
+    <!-- 表头 -->
+    <view class="tr1">
+        <view class="th_1">姓名</view>
+        <view class="th_2">年龄</view>
+        <view class="th_3">病症</view>
+        <view class="th_4">备注</view>
+    
+    </view>
+    <!-- 表格第二列 -->
+    <view class="tr2">
+        <view class="td_1">{{patientInfo.name}}</view>
+        <view class="td_2">{{patientInfo.age}}</view>
+        <view class="td_3">{{patientInfo.disease}}</view>
+        <view class="td_4">{{patientInfo.tips}}</view>
+    </view>  
+</view>
+
+<view style="margin-top:10px; font-size: large; font-weight: 1000; text-align:center;">选择静脉</view>
+
+<view>
+  <view class="type_in_box">
+    <l-input class="context" bindtap="showActionSheet" placeholder="选择静脉" label ="请选择静脉" value="{{vein_list[vein_index]}}" disable="true"></l-input>
+  </view>
+  <view class="type_in_box">
+    <l-input class="context" label = "手动输入" placeholder="输入静脉名称" bind:lininput="inputEditVeinName" data-name="inputValue" value="{{vein_input}}">
+    </l-input>
+  </view>
+  <view class="type_in_box">
+    <view style="position:relative; top:28rpx; font-size: 28rpx; font-weight: 1000; margin-left: 30px;">已注射:{{patientInfo.infused_veins}}</view>
+  </view>
+  <!-- <view class="type_in_box">
+    <l-textarea class="context" label="备注" placeholder="备注" bind:lininput="inputEditTips" data-name="inputValueTips" value="{{tips}}"></l-textarea>
+  </view> -->
+  <text style="position: relative; font-size: 28rpx; left: 85rpx; top: 50rpx;">备注：</text>
+  <view style="position: relative; width: 580rpx; left:55rpx; top:15rpx;">
+    <l-textarea value="{{tips}}" style="position: relative; top: 65rpx;left:20rpx;" data-name="inputValueTips" bind:lininput="inputEditTips" placeholder="请输入"></l-textarea>
+  </view>
+</view>
+<view class = "btns">
+  <l-button bindtap="onTapGoToMain" plain="{{true}}">放弃编辑
+  </l-button>
+  <l-button bindtap="onTapGoToLast">上一页
+  </l-button>
+  <l-button bindtap="onTapGoToNext">下一页
+  </l-button>
+</view>

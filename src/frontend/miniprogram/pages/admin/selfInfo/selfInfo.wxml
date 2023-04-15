@@ -1,0 +1,65 @@
+<!--pages/admin/selfInfo/selfInfo.wxml-->
+<!-- <text>pages/admin/selfInfo/selfInfo.wxml</text> -->
+<!-- 标题 -->
+<wxs module="mail">
+var toHide = function (array) {
+  var str = array.split("@");
+      var str1 =
+        str[0].substring(0, str[0].length - 2) + "***@***" + str[1].substring(str[1].length - 3);
+    return str1;
+}
+module.exports.toHide = toHide;
+</wxs>
+<view class="head_top"></view>
+<view class='container'>
+  <l-card class="card">
+    <view class="content" style="position: relative; align-items:center; display: flex; flex-direction: column; width: 100%; left: -130rpx;">
+      <image src="/static/pic.png" style="position:relative; width:170rpx;height: 170rpx;"/>
+      <text style="position: absolute; top: 190rpx;">{{nurse_info.name}}</text>
+    </view>
+  </l-card>
+
+  <l-card class="info">
+    <view class="content" style="position: relative;">
+      <text style="position: absolute; left: -280rpx;">工作证号</text>
+      <view style="position: absolute; left: -50rpx; width: 300rpx;">
+        <text style="position: absolute; width: 300rpx; text-align: right;">{{nurse_info.staff_id}}</text>
+      </view>
+    </view>
+  </l-card>
+
+  <l-card class="info">
+    <text style="position: absolute; left: -280rpx;">邮箱</text>
+      <view style="position: absolute; left: -50rpx; width: 300rpx;">
+        <text style="position: absolute; width: 300rpx; text-align: right;">{{mail.toHide(nurse_info.email)}}</text>
+      </view>
+  </l-card>
+
+  <l-card class="info">
+    <text style="position: absolute; left: -280rpx;">科室</text>
+      <view style="position: absolute; left: -50rpx; width: 300rpx;">
+        <text style="position: absolute; width: 300rpx; text-align: right;">{{nurse_info.department}}</text>
+      </view>
+  </l-card>
+
+  <l-card class="info" wx:if="{{nurse_info.openid==''||nurse_info.openid==null}}">
+    <text style="position: absolute; left: -240rpx;">微信未绑定</text>
+  <view style="width: 300rpx;">
+    <l-button class='revise'  plain="{{true}}" bindtap="onTapGoToWechatBand" style="left: 100rpx; top: -15rpx;">绑定</l-button>
+  </view>
+  </l-card>
+  <l-card class="info" wx:if="{{nurse_info.openid!==''&&nurse_info.openid!==null}}">
+    <text style="position: absolute; left: -240rpx;">微信已绑定</text>
+  <view style="width: 300rpx;">
+    <l-button class='revise'  plain="{{true}}" bindtap="onTapGoToWechatBandCancel" style="left: 100rpx; top: -15rpx;">解绑</l-button>
+  </view>
+  </l-card>
+
+  <view class='buttons'>
+    <l-button class="revise" plain="{{true}}" bindtap="onTapGoToModify">修改</l-button>
+    
+    <l-button class="logout" plain="{{true}}" bindtap="OnTapLogout">登出</l-button>
+  </view>
+  <l-tab-bar list="{{list}}" />
+</view>
+

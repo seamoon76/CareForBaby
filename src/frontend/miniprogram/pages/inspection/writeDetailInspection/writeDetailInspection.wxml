@@ -1,0 +1,75 @@
+<!--pages/inspection/writeDetailInspection/writeDetailInspection.wxml-->
+<!-- 标题 -->
+<view style="text-align: center;">
+  <text style="position: relative; top: 25rpx; font-size: 40rpx; ">添加巡视记录</text>
+
+  <form bindsubmit="formSubmit">
+    <!-- 不良反应 -->
+    <view style="position:relative; width:80%; left:70rpx; top: 0rpx;">
+      <l-input class="complication" name="complications" label="不良反应" placeholder="请输入不良反应" label-layout="left" placeholder-style="left:40rpx;" />
+    </view>
+    <view>
+    <l-button plain="{{true}}" style="position:relative; top:1100rpx; left: -150rpx;" bindtap="onClickShow">快速查询应对措施</l-button>
+  </view>
+  <!-- 
+    <l-popup show="{{is_show}}">
+      <view style="background-color: aliceblue;width:500rpx;height: 800rpx; text-align: left;">
+        <view style="margin: 30rpx;">
+          <textarea disabled="true" style="width: 450rpx; height:140rpx;">发热:立即减慢或停止输液汇报主治医师，必要时更换液体和输液器。</textarea>
+        </view>
+        <view style="margin: 30rpx;">
+          <textarea disabled="true" style="width: 450rpx; height:240rpx;">静脉炎:立即停止输液，局部抬高制动，局部予50%硫酸镁湿热敷或超短波理疗或中药如意黄金散局部外敷等，合并全身感染者，遵医嘱予抗生素治疗</textarea>
+        </view>
+        <view style="margin: 30rpx;">
+          <textarea disabled="true" style="width: 450rpx; height:240rpx;">空气栓塞:立即停止输液，置患者左侧卧位和头低脚高位，汇报值班医生。密切观察患者病情变化，遵医嘱予氧气吸入及药物治疗。</textarea>
+        </view>
+        
+      </view>
+    </l-popup> -->
+    <l-popup show="{{is_show}}">
+      <view class='page-cont'>
+        <view class='top'>
+          <view class='p_one'>并发症应对措施</view>
+        </view>
+        <view class='cont'>
+          <view class='cont-p'>
+            <view class='text'><text>1</text></view><view> 发热：
+          </view>
+          </view>
+          <view class='cont-p-lib'>
+            <view class='text' style='opacity:0;'><text>3</text></view><view>立即减慢或停止输液汇报主治医师，必要时更换液体和输液器。</view>
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>2</text></view><view>静脉炎：
+          </view>
+          </view>
+          <view class='cont-p-lib'>
+            <view class='text' style='opacity:0;'><text>3</text></view><view>立即停止输液，局部抬高制动，局部予50%硫酸镁湿热敷或超短波理疗或中药如意黄金散局部外敷等，合并全身感染者，遵医嘱予抗生素治疗。</view>
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>3</text></view><view>空气栓塞：</view>
+          </view>
+          <view class='cont-p-lib'>
+            <view class='text' style='opacity:0;'><text>3</text></view><view>立即停止输液，置患者左侧卧位和头低脚高位，汇报值班医生。密切观察患者病情变化，遵医嘱予氧气吸入及药物治疗。</view>
+          </view>
+            <view class="bottom" bindtap="closeThis">关闭</view>
+        </view>
+      </view>
+      
+    </l-popup>
+    <!-- 备注 -->
+    <text class="tips-text">备注：</text>
+    <view style="position:relative; width:77%; left:95rpx; top: -40rpx; text-align: left">
+      <l-textarea class="tips" name="tips" placeholder="如有备注请填写..." />
+    </view>
+    <view style="display: flex; position: relative; top: 320rpx;">
+      <button type='primary' style="width:220rpx; height: 80rpx; font-size: 33rpx; font-weight: 400; color:#3a63bd; background-color: transparent; border: solid 3rpx;;" bindtap="onTapReturn">取消</button>
+      <button type='primary' style="width: 220rpx; height: 80rpx; font-size: 30rpx; font-weight: 400; background-color: #3a63bd; " form-type='submit'>确认添加</button>
+    </view>
+  </form>
+  <view style="display: flex; position:relative; top:100rpx;">
+    <text class="emergency-text">一键紧急呼叫：</text>
+    <l-button bg-color="rgb(255,40,40)" style="position:relative;left: 120rpx; top: 480rpx;" bindtap="onTapEmergency">紧急呼叫</l-button>
+  </view>
+  
+</view>

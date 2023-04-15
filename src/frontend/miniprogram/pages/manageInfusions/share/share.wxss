@@ -1,0 +1,5 @@
+/* pages/manageInfusions/share/share.wxss */
+.type_in_box{
+  display: flex;
+  margin: 10px;
+}

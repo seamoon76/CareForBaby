@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "l-input": "/miniprogram_npm/lin-ui/input/index",
+    "l-toast": "/miniprogram_npm/lin-ui/toast/index",
+    "l-tab-bar":"/miniprogram_npm/lin-ui/tab-bar/index",
+    "l-card":"/miniprogram_npm/lin-ui/card/index",
+    "l-button":"/miniprogram_npm/lin-ui/button/index",
+    "l-popup":"/miniprogram_npm/lin-ui/popup/index"
+  }
+}

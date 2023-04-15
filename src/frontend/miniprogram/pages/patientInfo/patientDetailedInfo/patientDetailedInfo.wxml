@@ -1,0 +1,35 @@
+<!--pages/patientDetailedInfo/patientDetailedInfo.wxml-->
+<!-- 标题 -->
+<view style="text-align: center;">
+  <text style="position: relative; top: 25rpx; font-size: 40rpx; ">患者详情</text>
+</view>
+<l-icon name="forward" style="position: relative; left: 100rpx; top: -20rpx;" bindtap="onTapGoToPatientInfo"></l-icon>
+
+<form>
+  <l-input label="姓名" value="{{patientInfo.name}}" width="600" label-width="300" disabled="{{true}}"/>
+  <l-input label="年龄" value="{{patientInfo.age}}" width="600" label-width="300" disabled="{{true}}"/>
+  <l-input label="监护人" value="{{patientInfo.parents}}" width="600" label-width="300" disabled="{{true}}"/>
+  <l-input label="监护人与患者关系" value="{{patientInfo.relation}}" width="600" label-width="300" disabled="{{true}}"/>
+  <!-- <l-input label="监护人身份证号" value="{{patientInfo.creditID}}" width="600" label-width="300" disabled="{{true}}"/> -->
+  <l-input label="监护人手机号" value="{{patientInfo.phone}}" width="600" label-width="300" disabled="{{true}}"/>
+  <l-input label="床号" value="{{patientInfo.bedID}}" width="600" label-width="300" disabled="{{true}}"/>
+  <l-input label="房间号" value="{{patientInfo.roomID}}" width="600" label-width="300" disabled="{{true}}"/>
+  <l-input label="住院号" value="{{patientInfo.patient_id}}" width="600" label-width="300" disabled="{{true}}"/>
+  <l-input label="患者性别" value="{{patientInfo.gender}}" width="600" label-width="300" disabled="{{true}}"/>
+  <l-input label="病症" value="{{patientInfo.disease}}" width="600" label-width="300" disabled="{{true}}"/>
+  <l-input label="已注射静脉" value="{{patientInfo.infused_veins}}" width="600" label-width="300" disabled="{{true}}"/>
+  <view class="info" style="position: relative;display: flex; left: 23rpx; top: 60rpx;">
+    <text style="position:relative; width:230rpx; height:209rpx; font-size: 28rpx;">历史巡视记录：</text>
+    <l-button class="inspection-button" size="mini" type="default" bindtap="onTapGoToInspection">点我查看</l-button>
+  </view>
+  <text style="position: relative; font-size: 28rpx; left: 23rpx; ">注意事项：</text>
+  <view style="position: relative; width: 580rpx; left:20rpx;">
+    <l-textarea value="{{patientInfo.tips}}" style="position: relative; top: 35rpx;" disabled="{{true}}"></l-textarea>
+  </view>
+  <text style="position: relative;font-size: 28rpx; top: 80rpx; left: 23rpx;">脚纹：</text>
+  <view class="foot-input">
+  <image src="{{patientInfo.foot}}" mode="scaleToFill"></image>
+    <!-- <l-image-picker /> -->
+  </view>
+  
+</form>

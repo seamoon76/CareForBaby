@@ -1,0 +1,31 @@
+/* pages/register/register.wxss */
+form{
+  width: 280px;
+  height: 260px;
+  line-height: 38px;
+  /* border: 1px solid red;  */
+}
+input{
+  border: 1px solid rgb(184, 183, 183);
+  width: 280px;
+  height: 38px;
+}
+.button{
+  margin-top: 25px;
+  color: rgb(99, 97, 240)!important;
+}
+.header text{
+  font-size: 25px;
+  color: rgb(85, 84, 84);
+}
+form text{
+  font-size: 20px;
+  color: #666;
+}
+.fpwd{
+  margin-top: 200px;
+}
+.fpwd text{
+  color: #ccc;
+  font-size: 18px;
+}

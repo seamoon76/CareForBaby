@@ -1,0 +1,21 @@
+<!--pages/register/register.wxml-->
+<l-toast />
+<view class='container'>
+  <view class='header'>
+    <text>输液护理系统</text>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class='section'>
+      <text>工作证号：</text>
+      <input type='text' placeholder='请输入工作证号' name="usr" value=''/>
+    </view>
+    <view class='section'>
+      <text>密码:</text>
+      <input password='true' placeholder='请输入密码' name="pwd" value=''/>
+    </view>
+    <view class='button'>
+      <button type='primary' form-type='submit'>注册用户</button>
+    </view>
+  </form>
+</view>
+

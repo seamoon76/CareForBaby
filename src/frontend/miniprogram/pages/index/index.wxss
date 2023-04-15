@@ -1,0 +1,39 @@
+/**index.wxss**/
+
+.userinfo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: 700;
+  font-size: 60rpx;
+  top: 100rpx;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.goto-register {
+  margin-top: 25px;
+  padding-top: 15px;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.goto-login {
+  position: relative;
+  margin-top: 65rpx;
+  padding-top: 15px;
+  height: 120rpx;
+  top: 600rpx;
+}
+
+.goto-admin-login {
+  position: relative;
+  margin-top: 65rpx;
+  padding-top: 15px;
+  height: 120rpx;
+  position: relative;
+  left: 0rpx;
+  top: 650rpx;
+}

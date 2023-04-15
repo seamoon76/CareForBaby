@@ -1,0 +1,55 @@
+<!--pages/manageInfusions/addInfusions/addInfusions.wxml-->
+<!--pages/manageInfusions/infusionDetaildInfoRevised/infusionDetaildInfoRevised.wxml-->
+<!--pages/admin/nurseDetaildInfoRevised/nurseDetaildInfoRevised.wxml-->
+<l-toast />
+<view class='container'>
+  <!-- <view style="text-align: center;"> -->
+  <view class='header'>
+    <text style="position: relative; left: -1rpx; top: -92rpx">请确认输液记录</text>
+
+  </view>
+  <form bindsubmit="formSubmit">
+
+    <view class='section' class="my-form-item">
+      <l-input type='text' label="开始时间" name="start_time" value="{{infusion_info.start_time}}" label-layout="left" />
+      <!--TODO：待添加：rules="{{TimeRule}}-->
+    </view>
+    <view class='section' class="my-form-item">
+      <l-input type='text' label="结束时间" name="end_time" value="{{infusion_info.end_time}}" label-layout="left" />
+    </view>
+
+    <view class='section' class="my-form-item">
+      <l-input type='text' label="患者住院号" name="patient_id" value="{{patient_id}}" label-layout="left" />
+    </view>
+    <!-- <view class='section' class="my-form-item">
+      <l-input type='text' label="床号" placeholder='请输入床号' name="bed_id" value="" label-layout="left" clear="{{true}}" required="{{true}}"/>
+    </view> -->
+    <view class='section' class="my-form-item">
+      <l-input type='text' label="药物名称" name="drug" value="{{infusion_info.drug}}" label-layout="left" />
+    </view>
+    <view class='section' class="my-form-item">
+      <l-input type='text' label="药物剂量" name="dose" value="{{infusion_info.dose}}" label-layout="left" />
+    </view>
+    <view class='section' class="my-form-item">
+      <l-input type='text' label="静脉" name="vein" value="{{infusion_info.vein}}" label-layout="left" />
+    </view>
+    <view class='section' class="my-form-item">
+      <l-input type='text' label="器材" name="equipments" value="{{infusion_info.equipments}}" label-layout="left" />
+    </view>
+    <!-- <view class='section' class="my-form-item" style="height: 70rpx;">
+      <l-input type='text' class="context" label="注意事项" name="tips" value="{{infusion_info.tips}}" label-layout="left" />
+    </view> -->
+    <text style="position: relative; font-size: 28rpx; left: 10rpx; top: 20rpx;">注意事项：</text>
+  <view style="position: relative; width: 580rpx; left:10rpx; top:35rpx;">
+    <l-textarea type='text' class="context" label="注意事项" name="tips" value="{{infusion_info.tips}}" label-layout="left"></l-textarea>
+  </view>
+
+    <view class="btns" style="display: flex; position:relative; left:310rpx; top: 120rpx;">
+      <button bindtap="onTapCancel" plain="{{true}}"  style="position: relative;left: -300rpx; width: 170rpx; color: #3a63bd; border: solid 3rpx #3a63bd; font-size: 33rpx; font-weight: 500;">取消
+      </button>
+      <button form-type="submit" plain="{{true}}"  style="position: relative;left: -300rpx; width: 170rpx; background-color: #3a63bd; color: white; border: transparent; font-size: 33rpx; font-weight: 500;">添加
+      </button>
+    </view>
+  </form>
+  <!-- </view> -->
+</view>

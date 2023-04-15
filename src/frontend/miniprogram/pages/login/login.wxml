@@ -1,0 +1,49 @@
+<!--pages/login/login.wxml-->
+<l-toast />
+<view class="v1">
+  <!-- v2父容器  子view使用绝对布局 -->
+  <view class="v2">
+    <view class="dltext">护士登录</view>
+    <form bindsubmit="formSubmit">
+      <!-- 工作证号 -->
+      <view class="phoneCs">
+        <image src="/static/id.png" class="ph"></image>
+        <view style="position:relative; width: 500rpx; left:30rpx; ">
+          <l-input width="450" showRow="{{false}}" placeholder="请输入工作证号" name="usr" rules="{{IDRule}}" bind:linvalidate="handleError"/>
+          <view class="line"></view>
+        </view>
+      </view>
+
+      <!-- 密码 -->
+      <view class=passwordCs">
+        <image src="/static/password.png" class="ps"></image>
+        <view style="position:relative; width: 500rpx; left:30rpx; ">
+          <l-input width="450" showRow="{{false}}" placeholder="请输入密码" name="pwd" rules="{{PasswordRule}}" type="password" bind:linvalidate="handleError"/>
+          <view class="line"></view>
+        </view>
+      </view>
+
+      <!-- 忘记密码  -->
+      <view class="forget">
+        <navigator url="../resetPass/resetPass" open-type="navigate">忘记密码?</navigator>
+      </view>
+
+      <!-- 登录按钮 -->
+      <view class="denglu">
+        <button class="btn-dl" type="primary" form-type="submit">登录</button>
+      </view>
+    </form>
+  </view>
+
+  <!-- 提示框  使用以下方式登录 -->
+  <view class="v3">
+    <view class="line"></view>
+    <view class="lText">您还可以使用以下方式登录</view>
+    <view class="line"></view>
+  </view>
+
+  <!-- qq  weixin  weibo 图标展示view -->
+  <view class="qwwIcon">
+    <image src="/static/weixin.png" bindtap="onTapWechatLogin"></image>
+  </view>
+</view>

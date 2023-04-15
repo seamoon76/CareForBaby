@@ -1,0 +1,67 @@
+<!--pages/manageInfusions/index/index.wxml-->
+
+<!-- 标题 -->
+<view style="text-align: center;">
+  <text style="position: relative; top: 25rpx; font-size: 40rpx; ">输液记录</text>
+</view>
+
+<!-- 添加记录按钮 & 筛选 排序 按钮-->
+<view class="buttons">
+  <view class="add">
+    <l-icon name="add" bindtap="onTapGoToAddInfusion" class="add-button" />
+    <text style="position: relative; left: 20rpx; " bindtap="onTapGoToAddInfusion">手动补录</text>
+  </view>
+
+  <view class="order">
+    <view class="flex_">
+      <l-icon name="order" bindtap="onTapGoToSort" class="order-button" />
+      <text style="position: relative; left: 20rpx;" bindtap="onTapGoToSort">排序</text>
+      <l-icon name="research" bindtap="onTapGoToSearch" class="research-button" style="position: relative; left: 200rpx;" />
+      <text style="position: relative; left: 220rpx;" bindtap="onTapGoToFilter">筛选</text>
+    </view>
+  </view>
+
+  <view class="order_box">
+    <myselect prop-array='{{OrderArray}}' bind:myget='getDate' style="position: relative;left:0rpx;padding-bottom: 60rpx;">
+    </myselect>
+    <myselect prop-array='{{SearchArray}}' bind:myget='getSearchData' style="position: relative;left: 50rpx;padding-bottom: 60rpx;"></myselect>
+
+
+  </view>
+</view>
+
+<view class="form" style="width: 750rpx; height: 54rpx; display: block; box-sizing: border-box; left: 1rpx; top: 104rpx; position: relative">
+  <!-- 记录列表 -->
+  <view style="position: relative; left: 62rpx; top: 0rpx; width: 148rpx; height: 42rpx; display: block; box-sizing: border-box">姓名
+  </view>
+  <view style="position: relative; left: 226rpx; top: -42rpx; width: 148rpx; height: 42rpx; display: block; box-sizing: border-box">开始时间
+  </view>
+  <view class="patient" wx:for="{{InfusionsArray}}" wx:for-index="idx" wx:for-item="itemInfusion" style="width: 750rpx; height: 90rpx; display: block; box-sizing: border-box">
+    <view style="display: flex;">
+      <text style="position: relative; left: 70rpx; top: -8rpx; font-size: 13px;">{{patient_map[itemInfusion.patient_query_id]}}</text>
+      <view style="position: absolute; left: 180rpx;  font-size: 13px;">
+        <text class="st_time" >{{itemInfusion.start_time}}</text>
+      </view>
+      <view style="display: flex; position: absolute; left: 70rpx;">
+        <view class="eye">
+          <l-icon name="eye" bindtap="onTapGoToInfusionDetailedInfo" class="eye-button" data-id="{{itemInfusion.id}}" />
+        </view>
+        <view class="edit">
+          <l-icon name="edit" bindtap="onTapGoToInfusionDetailedInfoRevised" class="edit-button" data-id="{{itemInfusion.id}}" />
+        </view>
+        <view class="share">
+          <l-icon name="share" bindtap="onTapGoToInfusionShare" class="share-button" data-id="{{itemInfusion.id}}" />
+        </view>
+        <view class="delete">
+          <l-icon name="delete" bindtap="onTapGoToDeleteInfusion" class="delete-button" data-id="{{itemInfusion.id}}" />
+        </view>
+      </view>
+    </view>
+    <view style="display: flex;margin-top:50rpx ;">
+      <view class="line"></view>
+    </view>
+  </view>
+  <view style="padding-bottom: 106rpx;"></view>
+
+</view>
+<l-tab-bar list="{{list}}" />

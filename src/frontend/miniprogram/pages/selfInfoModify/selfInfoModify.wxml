@@ -1,0 +1,33 @@
+<!--pages/admin/selfInfoModify/selfInfoModify.wxml-->
+
+<view class='container'>
+  <view style="text-align: center;">
+    <view class='header'>
+      <text class="title">修改个人信息</text>
+    </view>
+    <form bindsubmit="formSubmit" class='section'>
+      <view>
+        <!-- <text>工作证号：</text> -->
+        <l-input type='text' label="工作证号" placeholder='请输入工作证号' required="{{true}}" name="uid" value="{{nurse_info.staff_id}}" label-layout="left" clear="{{true}}" rules="{{IDRule}}" />
+      </view>
+
+      <view class='section' class="my-form-item">
+        <!-- <text>邮箱：</text> -->
+        <l-input type='text' label="邮箱" placeholder='请输入邮箱' name="mail" model:value="{{nurse_info.email}}" label-layout="left" clear="{{true}}" rules="{{MailRule}}" required="{{true}}" />
+      </view>
+      <view class='section' class="my-form-item">
+        <l-input type='text' label="姓名" placeholder='请输入姓名' name="username" model:value="{{nurse_info.name}}" label-layout="left" clear="{{true}}" required="{{true}}" />
+      </view>
+      <view class='section' class="my-form-item">
+        <l-input type='text' label="科室" placeholder='请输入科室' name="department" model:value="{{nurse_info.department}}" label-layout="left" clear="{{true}}" required="{{true}}" />
+      </view>
+
+
+      <view class='buttons'>
+        <button type='primary' form-type='submit' class="revise">修改</button>
+
+        <button type='primary' class="back" bindtap="onTapCancel">取消</button>
+      </view>
+    </form>
+  </view>
+</view>

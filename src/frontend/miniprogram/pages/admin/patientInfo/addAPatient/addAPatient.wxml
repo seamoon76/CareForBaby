@@ -1,0 +1,48 @@
+<!--pages/addAPatient/addAPatient.wxml-->
+<!-- 标题 -->
+<l-toast/>
+<view style="text-align: center;">
+  <text style="position: relative; top: 25rpx; font-size: 40rpx; ">添加患者</text>
+</view>
+
+<form bindsubmit="formSubmit">
+  <view style="display: flex; position: relative; top: -10rpx;">
+    <button type='primary' style="width:220rpx; height: 80rpx; font-size: 33rpx; font-weight: 400; color:#3a63bd; background-color: transparent; border: solid 3rpx;left: -70rpx;" bindtap="onTapGoToPatientInfo">取消</button>
+    <button type='primary' style="width: 220rpx; height: 80rpx; font-size: 30rpx; font-weight: 400; background-color: #3a63bd; left: -70rpx;" form-type='submit'>确认添加</button>
+  </view>
+
+  <l-input label="姓名" value="{{patientInfo.name}}" width="600" label-width="300" name="name" placeholder="请输入" required="{{true}}"/>
+  <l-input label="年龄" value="{{patientInfo.age}}" width="600" label-width="300" name="age" placeholder="请输入" required="{{true}}"/>
+  <l-input label="监护人" value="{{patientInfo.parents}}" width="600" label-width="300" name="parents" placeholder="请输入" required="{{true}}"/>
+  <l-input label="监护人与患者关系" value="{{patientInfo.relation}}" width="600" label-width="300" name="relation" placeholder="请输入" required="{{true}}"/>
+  <l-input label="监护人手机号" value="{{patientInfo.phone}}" width="600" label-width="300" name="phone" placeholder="请输入" required="{{true}}" rules="{{phoneRule}}" bind:linvalidate="handleError"/>
+  <l-input label="床号" value="{{patientInfo.bedID}}" width="600" label-width="300" name="bedID" placeholder="请输入" required="{{true}}"/>
+  <l-input label="房间号" value="{{patientInfo.roomID}}" width="600" label-width="300" name="roomID" placeholder="请输入" required="{{true}}"/>
+  <l-input label="住院号" value="{{patientInfo.patient_id}}" width="600" label-width="300" name="patient_id" placeholder="请输入" required="{{true}}" rules="{{IDRule}}" bind:linvalidate="handleError"/>
+  <l-input label="病症" value="{{patientInfo.disease}}" width="600" label-width="300" name="disease" placeholder="请输入" required="{{true}}" />
+  <l-input label="已注射静脉" value="{{patientInfo.infused_veins}}" width="600" label-width="300" name="infused_veins" placeholder="请输入" required="{{true}}" />
+  <view class="inputbox">
+        <view class="inptxt">性别</view>
+        <view class="inpbox">
+          <radio-group bindchange="radioChange" class="inp radiogroup">
+            <view class="radiobox" wx:for="{{gender}}" wx:key="value">
+              <radio value="{{item.id}}" color="#ff0000" checked="{{item.checked}}"/>
+              <view class="radiotxt">{{item.value}}</view>
+            </view>
+          </radio-group>          
+        </view>
+      </view>
+      <text style="position: relative;font-size: 28rpx; top: 20rpx; left: 40rpx;">脚纹</text>
+  <view class="foot-input" >
+    <l-image-picker disabled="false" required="{{true}}"   max-image-size	="{{1000000}}" size-type="compressed" bind:linchange="onChangeImagePickerTap"
+    bind:linoversize="onImgOverSize"/>
+    <!-- <button type="primary" bindtap="chooseImage" style="width: 320rpx; height: 80rpx; font-size: 30rpx; font-weight: 400; background-color: #3a63bd; left: -70rpx;" 
+    >添加图片</button> -->
+  </view>
+  <text style="position: relative; font-size: 28rpx; left: 23rpx; top: -25rpx;">注意事项：</text>
+  <view style="position: relative; width: 580rpx; left:20rpx; top:-15rpx;">
+    <l-textarea value="{{patientInfo.tips}}" style="position: relative; top: 15rpx;" name="tips" placeholder="请输入" required="{{true}}"></l-textarea>
+  </view>
+
+</form>
+  

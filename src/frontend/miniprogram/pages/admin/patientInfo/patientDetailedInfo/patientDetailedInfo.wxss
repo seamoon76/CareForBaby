@@ -1,0 +1,25 @@
+/* pages/patientDetailedInfo/patientDetailedInfo.wxss */
+
+form{
+  position: relative;
+  top: 70rpx;
+  left: 74rpx;
+}
+
+l-input{
+  position: relative;
+}
+
+.foot-input {
+  position: relative;
+  left: 10rpx;
+  top: 18rpx;
+  transform: scale(0.7);
+}
+
+.inspection-button {
+  position: relative;
+  top: -10rpx;
+  height: 130rpx;
+  font-size: 28rpx;
+}

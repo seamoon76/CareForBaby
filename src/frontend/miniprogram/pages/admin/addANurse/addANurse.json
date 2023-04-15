@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "l-button": "/miniprogram_npm/lin-ui/button/index",
+    "l-input": "/miniprogram_npm/lin-ui/input/index",
+    "l-toast": "/miniprogram_npm/lin-ui/toast/index",
+    "l-textarea": "/miniprogram_npm/lin-ui/textarea/index",
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index"
+  }
+}

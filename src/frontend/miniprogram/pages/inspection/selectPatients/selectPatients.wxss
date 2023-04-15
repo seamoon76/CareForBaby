@@ -1,0 +1,52 @@
+/* pages/inspection/selectPatients/selectPatients.wxss */
+.form {
+  position: relative;
+  width: 750rpx;
+  background: white;
+  height: 99rpx;
+  left: 0rpx;
+  top: 50rpx;
+  display: block;
+  box-sizing: border-box;
+}
+
+.line {
+  background-color: rgb(243, 242, 242);
+  width: 645rpx;
+  height: 3rpx;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  left: 53rpx;
+  top: -33rpx
+}
+.checkbox{
+  position: relative;
+  left: 80rpx;
+  top: 40rpx;
+}
+.roomID-view{
+  position: relative;
+  top: -43rpx;
+}
+.bedID-view{
+  position: relative;
+  top: -43rpx;
+}
+.write-view{
+  position: relative;
+  top: -60rpx;
+}
+.write{
+  position: absolute;
+  right: 60rpx;
+  transform: scale(0.85);
+  font-weight: 800;
+  top:20rpx;
+}
+
+.submit{
+  position:relative;
+  top: 40rpx;
+  left: 80rpx;
+}

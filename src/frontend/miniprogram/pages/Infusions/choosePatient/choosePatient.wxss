@@ -1,0 +1,47 @@
+/* pages/Infusions/choosePatient/choosePatient.wxss */
+
+.back-to-homepage {
+  position: relative;
+  left: 197rpx;
+  top: 0rpx;
+  height: 75rpx;
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  box-sizing: border-box;
+  border-radius: 15rpx;
+  padding: 5rpx 5rpx 6rpx 6rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.l-radio-style{
+  width: 750rpx;
+  height: 90rpx; 
+  display: block; 
+  box-sizing: border-box;
+}
+.line {
+  background-color: rgb(243, 242, 242);
+  width: 645rpx;
+  height: 3rpx;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  left: 53rpx;
+  top: -33rpx
+}
+.checkbox{
+  position: relative;
+  left: 80rpx;
+  top: 40rpx;
+}
+.roomID-view{
+  position: relative;
+  top: -43rpx;
+}
+.bedID-view{
+  position: relative;
+  top: -43rpx;
+}

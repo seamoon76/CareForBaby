@@ -1,0 +1,36 @@
+<!--pages/register/register.wxml-->
+<l-toast/>
+<view class='container'>
+  <view class='header'>
+    <text style="position: relative; font-size: large;">管理员注册</text>
+  </view>
+  <form bindsubmit="formSubmit" style="position: relative; top: 70rpx;">
+    <view class='section' class="my-form-item">
+      <!-- <text>工作证号：</text> -->
+      <l-input type='text' label="工作证号" placeholder='请输入工作证号' required="{{true}}" name="uid" value='' label-layout="left" clear="{{true}}" rules="{{IDRule}}"/>
+    </view>
+    <view class='section' class="my-form-item">
+      <!-- <text>密码:</text> -->
+      <l-input password='true' label="密码" placeholder='请输入密码' name="pwd" value='' label-layout="left" type="password" clear="{{true}}" rules="{{PasswordRule}}" required="{{true}}"/>
+    </view>
+    <view class='section' class="my-form-item">
+      <!-- <text>邮箱：</text> -->
+      <l-input type='text' label="邮箱" placeholder='请输入邮箱' name="mail" value='' label-layout="left" clear="{{true}}" rules="{{MailRule}}" required="{{true}}"/>
+    </view>
+    <view class='section' class="my-form-item">
+      <l-input type='text' label="姓名" placeholder='请输入姓名' name="username" value='' label-layout="left" clear="{{true}}" required="{{true}}"/>
+    </view>
+    <view class='section' class="my-form-item">
+      <l-input type='text' label="科室" placeholder='请输入科室' name="department" value='' label-layout="left" clear="{{true}}" required="{{true}}"/>
+    </view>
+    <!-- <view class='section' class="my-form-item">
+      <l-input type='text' label="身份" placeholder='请输入身份' name="role" value='' label-layout="left" clear="{{true}}" required="{{true}}"/>
+    </view> -->
+    
+    <view class='button' style="position: relative; top: 100rpx;">
+      <button type='primary' form-type='submit'>注册</button>
+    </view>
+  </form>
+  
+</view>
+

@@ -1,0 +1,45 @@
+/* pages/admin/selfInfo/selfInfo.wxss */
+.head_top{
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+.head_top::after{
+  content: '';  
+  width: 140%;
+  height: 300rpx;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+  background: #3b8b7e;
+}
+.card{
+  position: relative;
+  top: -300rpx;
+  width: 650rpx;
+  align-items: center;
+}
+.info{
+  position: relative;
+  display: flex;
+  width: 650rpx;
+  height: 100rpx;
+  top: -200rpx;
+  margin: 20rpx;
+}
+.buttons{
+  position: relative;
+  top: -50rpx;
+}
+.revise{
+  position: relative;
+  left: -80rpx;
+}
+.logout{
+  position: relative;
+  left: 80rpx;
+}

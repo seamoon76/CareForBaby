@@ -1,0 +1,57 @@
+version: "3"
+services:
+  app:
+    restart: always
+    build: .
+    command: >
+      bash -c
+      "python3 manage.py collectstatic --no-input &&
+      python3 manage.py migrate &&
+      gunicorn --timeout=30 --workers=4 --bind :8000 django_app.wsgi:application"
+    volumes:
+      - .:/code
+      - static-volume:/code/static
+    expose:
+      - "8000"
+    depends_on:
+      - db
+    networks:
+      - web_network
+      - db_network
+  db:
+    image: mysql:5.7
+    volumes:
+      - "./mysql:/var/lib/mysql"
+    env_file: .env
+    expose:
+      - "3306"
+    restart: always
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+    networks:
+      - db_network
+  nginx:
+    restart: always
+    image: nginx:latest
+    ports:
+      - "8001:8000"
+    volumes:
+      - static-volume:/code/static
+      - ./config/nginx:/etc/nginx/conf.d
+      #本地运行时注释掉下面两行
+      - /home/ubuntu/se.maqi.site_bundle.crt:/etc/nginx/se.maqi.site_bundle.crt
+      - /home/ubuntu/se.maqi.site.key:/etc/nginx/se.maqi.site.key
+    depends_on:
+      - app
+    networks:
+      - web_network
+
+networks:
+  web_network:
+    driver: bridge
+  db_network:
+    driver: bridge
+
+volumes:
+  static-volume:

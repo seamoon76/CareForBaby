@@ -1,0 +1,70 @@
+/* pages/Infusions/choose_tools/choose_tools.wxss */
+.table {
+  display: flex;    
+  flex-direction: row; 
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.tr1 {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.tr2 {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.th_1, .th_2, .th_3, .th_4, .td_1, .td_2, .td_3, .td_4 { /* 公有的属性 */
+  display: flex;
+  flex-wrap: wrap;            /* 自动换行 */
+  text-align: center;         /* 文本居中 */
+  justify-content:center;     /* 主轴居中 */
+  align-items: center;        /* 交叉轴居中 */
+  border-bottom: 1px solid rgb(156, 153, 153);      /* 单元格上线框 */
+}
+
+.th_1, .th_2, .th_3, .th_4 {
+  font-weight: 800;           /* 字体加重 */
+  background-color:#3a63bd;   /* 背景色 */
+  color: white;
+  height: 60rpx;
+}
+
+.td_1, .td_2, .td_3, .td_4 {
+  background-color:#dee0db;   /* 背景色 */
+  height: 60rpx;
+}
+
+.th_1, .th_2,.th_3,.th_4 {
+  width: 100%;
+}
+.td_1, .td_2,.td_3,.td_4 {
+  width: 100%;
+}
+
+.type_in_box{
+  display: flex;
+  margin: 10px;
+}
+
+.context{
+  width: 100%;
+  text-align: center;         /* 文本居中 */
+  justify-content:center;     /* 主轴居中 */
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.btns{
+  display: flex;
+  justify-content: center;
+}
+
+l-button{
+  margin: 10px;
+}
+

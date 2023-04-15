@@ -1,0 +1,118 @@
+/* pages/manageInfusions/index/index.wxss */
+/* pages/admin/manageNurse/manageNurse.wxss */
+/* pages/patientInfo/patientInfo.wxss */
+.form {
+  position: relative;
+  width: 750rpx;
+  background: white;
+  height: 99rpx;
+  left: 0rpx;
+  top: 120rpx;
+  display: block;
+  box-sizing: border-box
+}
+
+.eye-button {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  left: 400rpx;
+  top: -8rpx
+}
+
+.edit-button {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  left: 400rpx;
+  top: -10rpx
+}
+.share-button {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  left: 400rpx;
+  top: -10rpx
+}
+
+.delete-button {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  left: 400rpx;
+  top: -10rpx
+}
+
+.line {
+  background-color: rgb(243, 242, 242);
+  width: 645rpx;
+  height: 3rpx;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  left: 53rpx;
+  top: -33rpx
+}
+
+.buttons{
+  /* display: flex; */
+  position: relative;
+  top: 70rpx;
+}
+.add{
+  position: relative;
+  display: flex;
+  left: 60rpx;
+}
+.his{
+  position: relative;
+  display: flex;
+  left: 197rpx;
+}
+.research{
+  position: relative;
+  left: 360rpx;
+}
+.order{
+  position: relative;
+  left: 60rpx;
+  top:30rpx
+
+}
+
+.order_box{
+  position: relative;
+  left: 60rpx;
+  top:60rpx;
+  display: flex;
+}
+
+.search{
+  position: relative;
+  top:80rpx;
+  left:60rpx;
+
+}
+
+.flex_{
+  display: flex;
+}
+
+.st_time{
+  position: relative;
+  top: -7rpx;
+}
+
+.list-item {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-indent: 30rpx;
+}

@@ -1,0 +1,58 @@
+<!--pages/resetPass/resetPass.wxml-->
+<!--pages/login/login.wxml-->
+<l-toast />
+<view class="v1">
+  <!-- v2父容器  子view使用绝对布局 -->
+  <view class="v2">
+    <view class="dltext">输入uid</view>
+    <form bindsubmit="formSubmit">
+      <view class="phoneCs">
+        <image src="/static/id.png" class="ph"></image>
+        <view style="position:relative; width: 500rpx; left:30rpx; ">
+          <l-input width="450" showRow="{{false}}" placeholder="请输入邮件中uid" name="uid"/>
+          <view class="line"></view>
+        </view>
+      </view>
+
+      <!-- token -->
+      <view class=tokenCs">
+        <image src="/static/password.png" class="ph"></image>
+        <view style="position:relative; width: 500rpx; left:30rpx; ">
+          <l-input width="450" showRow="{{false}}" placeholder="请输入token" name="token"/>
+          <view class="line"></view>
+        </view>
+      </view>
+
+      <!-- 密码 -->
+      <view class=passwordCs">
+        <image src="/static/password.png" class="ps"></image>
+        <view style="position:relative; width: 500rpx; left:30rpx; ">
+          <l-input width="450" showRow="{{false}}" placeholder="请输入新密码" name="password" rules="{{PasswordRule}}"/>
+          <view class="line"></view>
+        </view>
+      </view>
+
+
+      <!-- 提交按钮 -->
+      <view class="denglu">
+        <button class="btn-dl" type="primary" form-type="submit">提交</button>
+      </view>
+
+      <view class="cancel">
+        <button class="btn-dl" type="default" bindtap="onTapCancel">取消</button>
+      </view>
+    </form>
+  </view>
+
+  <!-- 提示框  使用以下方式登录 -->
+  <!-- <view class="v3">
+    <view class="line"></view>
+    <view class="lText">您还可以使用以下方式登录</view>
+    <view class="line"></view>
+  </view> -->
+
+  <!-- qq  weixin  weibo 图标展示view -->
+  <!-- <view class="qwwIcon">
+    <image src="/static/weixin.png"></image>
+  </view> -->
+</view>

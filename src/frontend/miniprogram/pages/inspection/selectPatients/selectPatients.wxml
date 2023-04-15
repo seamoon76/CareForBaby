@@ -1,0 +1,38 @@
+<!--pages/inspection/selectPatients/selectPatients.wxml-->
+<!-- 标题 -->
+<view style="text-align: center;">
+  <text style="position: relative; top: 25rpx; font-size: 40rpx; ">患者列表</text>
+</view>
+<!-- 一键提交 -->
+<l-button class="submit" shape="semicircle" bindtap="onTapSubmitTogether" plain="{{true}}" size="mini">一键提交</l-button>
+
+<!-- 患者列表 -->
+<view class="form">
+  <!-- 患者列表 -->
+  <checkbox-group bindchange="handleItemChange" style="position:relative; left: 80rpx;">
+    
+    <checkbox wx:for="{{patientArray}}" wx:for-index="idx" wx:for-item="itemPatient" value="{{itemPatient.id}},{{itemPatient.name}}" style="position:relative; width:750rpx; top:20rpx; height: 90rpx; display: block; box-sizing: border-box">
+      <view style="display: flex;">
+    <view>
+      <text style="position: relative; left: 35rpx; top:20rpx;  font-size: 13px;">{{itemPatient.name}}</text>
+    </view>
+      <view >
+        <text style="position: relative; left: 100rpx; top:20rpx; font-size: 13px; ">{{itemPatient.roomID}}房</text>
+      </view>
+      <view >
+        <text style="position: relative; left: 160rpx;top:20rpx; font-size: 13px; ">{{itemPatient.bedID}}床</text>
+      </view>
+    </view>
+      <view class="write-view">
+        <l-button class="write" plain="{{true}}" shape="circle" bindtap="onTapToWriteDetail" data-id="{{itemPatient.id}}">填写巡视详情</l-button>
+      </view>
+    
+      <view style="display: flex;margin-top:45rpx; padding-top: 18rpx;position: relative;left: -55rpx;">
+        <view class="line"></view>
+      </view>
+    </checkbox>
+  </checkbox-group>
+  <view style="padding-bottom: 106rpx;"></view>
+  
+</view>
+<l-tab-bar list="{{list}}" />

@@ -1,0 +1,45 @@
+/* pages/admin/patientInfo/inspections/inspections.wxss */
+/* #3963bc */
+ /* 表格代码  */
+ .table {
+  border: 0px solid darkgray;
+  position: relative;
+  top: 60rpx;
+  margin: 18rpx;
+ }
+ .tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+  background-color: rgb(244, 246, 248);
+  font-weight: 500;
+ }
+ .td {
+  width:40%;
+  justify-content: center;
+  text-align: center;
+ }
+ .bg-w{
+  background: snow;
+ }
+ .bg-g{
+  background: #dce8ee;
+ }
+ .th {
+  width: 40%;
+  justify-content: center;
+  background: #3963bc;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  font-weight: 700;
+ }
+ .return{
+  position:absolute;
+  top: 1250rpx;
+  left: 290rpx;
+  font-weight: 700;
+}

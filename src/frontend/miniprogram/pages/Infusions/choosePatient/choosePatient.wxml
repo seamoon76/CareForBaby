@@ -1,0 +1,33 @@
+<!-- 标题 -->
+<view style="text-align: center;">
+  <text style="position: relative; top: 25rpx; font-size: 40rpx; ">选择患者</text>
+</view>
+
+<view class="page-section">
+  <view>
+    <radio-group bindchange="radioChange" none-checked="true" style="position: relative; top: 80rpx; left: 120rpx;">
+      <!-- 患者列表 -->
+      <label wx:for="{{patientArray}}" wx:for-item="itemPatient" wx:key="{{itemPatient.id}}" style="">
+        <view>
+          <radio value="{{itemPatient.id}}">
+            <label style="position: relative; left: 60rpx;top: 30rpx; font-size: 28rpx;">{{itemPatient.name}}
+            </label>
+            <label style="position: relative; left: 115rpx;top: 30rpx; font-size: 28rpx;">{{itemPatient.roomID}}房
+            </label>
+            <label style="position: relative; left: 155rpx;top: 31rpx; font-size: 28rpx;">{{itemPatient.bedID}}床
+            </label>
+            <view style="display:flex; margin-top:60rpx; position:relative; left:-160rpx; width: 600rpx; top: 30rpx;">
+              <view class="line"></view>
+            </view>
+          </radio>
+        </view>
+      </label>
+    </radio-group>
+  </view>
+</view>
+<view class="btns" style="position: relative; top: 300rpx; left: 200rpx;">
+  <l-button bindtap="onTapGoToMain" plain="{{true}}" style="position: relative;left: -70rpx;">放弃编辑
+  </l-button>
+  <l-button bindtap="onTapGoToChooseVein" style="position: relative;left: 70rpx;">下一页
+  </l-button>
+</view>

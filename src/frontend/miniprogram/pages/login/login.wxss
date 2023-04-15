@@ -1,0 +1,166 @@
+/* 最大的父元素 */
+.v1{
+  display: block;
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  background: #356363;
+  justify-content: center;
+}
+/* 白色区域 */
+.v1 .v2{
+  position: relative;
+  margin-top: 150rpx;
+  left: 100rpx; 
+  width: 545rpx;
+  height: 750rpx;
+  background: #FFFFFF;
+  border-radius: 50rpx;
+  justify-content: center;
+}
+/* 白色区域内的登录文本 */
+.v1 .v2 .dltext{
+  margin-top: 50rpx;
+  position: absolute;
+  margin-left:80rpx;
+  width: 250rpx;
+  left: -20rpx;
+  height: 100rpx;
+  font-size: 50rpx;
+  font-family: Helvetica;
+  color: #000000;
+  line-height: 100rpx;
+  letter-spacing: 2rpx;
+}
+/* 工作证号图片+输入框+下划线的父容器view */
+.v1 .v2 .phoneCs{
+  margin-top: 200rpx;
+  margin-left: 35rpx;
+  position: absolute;
+  display: flex;
+  height: 80rpx;
+}
+/* 工作证号图标 */
+.v1 .v2 .phoneCs .ph{
+  margin-top: 5rpx;
+  margin-left: 30rpx;
+  width: 55rpx;
+  height: 55rpx;
+}
+/* 工作证号输入框 */
+.v1 .v2 .phoneCs l-input{
+  position: relative; 
+  left: -200rpx;
+  top: -10rpx;
+}
+
+/* 工作证号下划线 */
+.v1 .v2 .phoneCs .line{
+  border: solid;
+  border-width: 1rpx;
+  border-color: rgb(182, 180, 180);
+  position: relative;
+  left: -100rpx;
+  width: 450rpx;
+  background-color: rgb(182, 180, 180);
+}
+
+/* 密码图标+输入框+下划线父容器view */
+.v1 .v2 .passwordCs{
+  margin-top: 400rpx;
+  margin-left: 35rpx;
+  position: absolute;
+  display: flex;
+  height: 80rpx ;
+}
+/* 密码图标 */
+.v1 .v2 .passwordCs .ps{
+  margin-top: 5rpx;
+  margin-left: 30rpx;
+  width: 55rpx;
+  height: 55rpx;
+}
+/* 密码输入框 */
+.v1 .v2 .passwordCs l-input{
+  position: relative; 
+  left: -200rpx;
+  top: -10rpx;
+}
+
+/* 工作证号下划线 */
+.v1 .v2 .passwordCs .line{
+  border: solid;
+  border-width: 1rpx;
+  border-color: rgb(182, 180, 180);
+  position: relative;
+  left: -100rpx;
+  width: 450rpx;
+  background-color: rgb(182, 180, 180);
+}
+
+/* 忘记密码父容器 */
+.v1 .v2 .forget{
+  font-size: 25rpx;
+  margin-left: 85rpx;
+  width: 370rpx;
+  left: 280rpx;
+  margin-top: 540rpx;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+/* 登录按钮容器view */
+.v1 .v2 .denglu{
+  width: 350rpx;
+  height: 60rpx;
+  position: absolute;
+  margin-top: 600rpx;
+  margin-left: 85rpx;
+  top: 30rpx;
+}
+/* 登录按钮 */
+.v1 .v2 .denglu button{
+  padding: 0rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  width: 100%;
+  height: 100%;
+  border-radius: 30rpx;
+  font-weight: 600;
+  left: 15rpx;
+}
+
+/* 提示文本 */
+.v3{
+  padding-left: 100rpx;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  padding-top: 50rpx;
+}
+.v3 .line{
+  margin-left: 5rpx;
+  margin-top: 18rpx;
+  width: 120rpx;
+  height: 3rpx;
+ background-color:#FFFFFF;
+}
+.v3 .lText{
+  color: #FFFFFF;
+  font-size: 25rpx;
+}
+/* qq wx wb */
+.qwwIcon{
+  margin-top: 60rpx;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 150rpx;
+  justify-content: center;
+}
+.qwwIcon image{
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+}

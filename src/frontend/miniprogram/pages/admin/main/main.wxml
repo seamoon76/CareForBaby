@@ -1,0 +1,55 @@
+<view class="container">
+  <view class='header'>
+    <text>管理员工作主页</text>
+  </view>
+  <image src="/static/pic.png" style="width:200rpx;height:200rpx; position:absolute;top:150rpx; " />
+
+  <text style="position: relative; top:130rpx;">{{nurse_info.name}}</text>
+
+  <view style="position: relative;width: 600rpx;">
+    <l-card type="primary" plaintext="{{true}}" title=" 管理护士" style="position: relative;top:220rpx;" bindtap='OnTapGoToManageNurse' >
+      <image src="/static/goto.png" style="width:50rpx;height:50rpx; position:absolute; left:400rpx; top:-5rpx; " />
+    </l-card>
+    <l-card type="primary" plaintext="{{true}}" title=" 管理患者" style="position: relative;top:270rpx;" bindtap='OnTapGoToManagePatient'>
+      <image src="/static/goto.png"  style="width:50rpx;height:50rpx; position:absolute; left:400rpx; top:-5rpx; "/>
+    </l-card>
+    <l-button class="instruction" shape="semicircle" size="mini" plain="{{true}}" bindtap="Showinfo">使用说明</l-button>
+    <l-popup show="{{is_show}}">
+      <view class='page-cont'>
+        <view class='top'>
+          <view class='p_one'>点击底部导航栏切换菜单</view>
+        </view>
+        <view class='cont'>
+          <view class='cont-p'>
+            <view class='text'><text>1</text></view><view> 工作主页：
+          </view>
+          </view>
+          <view class='cont-p-lib'>
+            <view class='text' style='opacity:0;'><text>3</text></view><view>您可以在这里管理患者及添加输液和巡视记录</view>
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>2</text></view><view>输液记录：
+          </view>
+          </view>
+          <view class='cont-p-lib'>
+            <view class='text' style='opacity:0;'><text>3</text></view><view>您可以在这里查看或修改已录入的输液记录，或进行手动补录</view>
+          </view>
+          <view class='cont-p'>
+            <view class='text'><text>3</text></view><view> 我的：</view>
+          </view>
+          <view class='cont-p-lib'>
+            <view class='text' style='opacity:0;'><text>3</text></view><view>您可以在这里查看并修改您的个人信息。</view>
+          </view>
+            <view class="bottom" bindtap="closeThis">记住了  我去试试</view>
+        </view>
+      </view>
+      
+    </l-popup>
+  </view>
+
+  <!-- <view>
+    <button bindtap='OnTapLogout' class="my-button-logout">退出登录</button>
+  </view> -->
+  <l-tab-bar list="{{list}}" />
+</view>
+

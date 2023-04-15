@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container" style="width: 100%;height:100%; top:0rpx;">
+  <image style="position: absolute;width: 100%;height:100%;top:0rpx;" src='/static/homepage.png'></image>
+  <!-- <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+  <view class="userinfo">
+    <text>CareForBaby</text>
+  </view>
+
+  <view>
+    <l-button type="default" class='goto-login' width="300" height="100" disabled="{{disabled}}" bindtap="onTapGoToLogin">护士登录 </l-button>
+  </view>
+
+  <view>
+    <l-button type="default" class='goto-admin-login'  width="300" height="100" disabled="{{disabled}}" bindtap="onTapGoToAdminLogin">我是管理员</l-button>
+  </view>
+</view>
